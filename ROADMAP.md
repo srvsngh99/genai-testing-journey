@@ -1382,7 +1382,7 @@ Everything comes together. Build something real.
 
 ## 🟤 Track B: ML Deep Dive (+10 weeks)
 
-*For Staff/Principal roles (₹75 LPA+)*
+*For Staff/Principal roles*
 
 | Week | Topic | Project |
 |------|-------|---------|
@@ -1402,14 +1402,14 @@ Everything comes together. Build something real.
 
 # 📊 Career Outcomes Summary
 
-| Completion | Role | Salary Range |
-|------------|------|--------------|
-| Weeks 1-28 | Junior AI QA Engineer | ₹25-40 LPA |
-| Weeks 1-46 | AI Evaluation Engineer | ₹40-55 LPA |
-| Weeks 1-52 + LLMTestKit | Senior AI Test Engineer | ₹50-65 LPA |
-| + Security Track | AI Security Engineer | ₹55-70 LPA |
-| + ML Track + Visibility | Staff AI Test Architect | ₹65-85 LPA |
-| + OSS + Talks + Network | Principal/Director | ₹80+ LPA |
+| Completion | Role |
+|------------|------|
+| Weeks 1-28 | Junior AI QA Engineer |
+| Weeks 1-46 | AI Evaluation Engineer |
+| Weeks 1-52 + LLMTestKit | Senior AI Test Engineer |
+| + Security Track | AI Security Engineer |
+| + ML Track + Visibility | Staff AI Test Architect |
+| + OSS + Talks + Network | Principal/Director |
 
 ---
 
