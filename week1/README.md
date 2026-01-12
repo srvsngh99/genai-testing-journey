@@ -1,4 +1,4 @@
-# 📘 Week 1: Python Basics — Strings, Variables, and Prompt Handling
+#📘 Week 1: Python Basics — Strings, Variables, and Prompt Handling
 
 ## 🎯 Week 1 Goal
 By end of this week, you will:
