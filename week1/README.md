@@ -1,6 +1,6 @@
-# 📘 Week 1: Python Basics — Strings, Variables, and Prompt Handling
+# Week 1: Python Basics — Strings, Variables, and Prompt Handling
 
-## 🎯 Week 1 Goal
+## Week 1 Goal
 By end of this week, you will:
 - Master Python string manipulation (the foundation of ALL prompt work)
 - Build `prompt-formatter` — a reusable prompt template engine
@@ -8,7 +8,7 @@ By end of this week, you will:
 
 ---
 
-## � Daily Breakdown
+## Daily Breakdown
 
 ### Time Budget: 8 hours total
 | Day | Focus | Time |
@@ -23,7 +23,36 @@ By end of this week, you will:
 
 ---
 
-# 📚 LEARNING TRACK
+## Practice Files Guide
+
+Week 1 has **TWO practice files** to cover everything for the mini-project:
+
+### File 1: `practice/01_basics_and_strings.py`
+**Covers:** Week 1 official syllabus
+- Variables and data types
+- String methods (`.strip()`, `.split()`, `.replace()`)
+- f-strings for formatting
+- **Time:** 1-2 hours (Mon-Tue)
+
+### File 2: `practice/02_functions_and_classes.py` ⭐
+**Covers:** Prerequisites for mini-project (not in Week 1 syllabus!)
+- Functions: `def`, parameters, `return`
+- Type hints: `def func(text: str) -> bool:`
+- `**kwargs`: Flexible arguments
+- Classes: `class`, `__init__`, `self`
+- **Time:** 1-2 hours (Wednesday)
+
+> **Why two files?** The mini-project needs functions and classes (Week 3 concepts). File 02 teaches just enough to succeed now. Week 3 goes deeper.
+
+**Recommended order:**
+1. Mon-Tue: Complete File 01 (strings)
+2. Wednesday: Complete File 02 (functions & classes)
+3. Thu-Sun: Build mini-project with confidence!
+
+---
+
+
+# LEARNING TRACK
 
 ## Monday: Variables, Strings, f-strings (1 hour)
 

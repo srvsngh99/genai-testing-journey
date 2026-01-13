@@ -8,7 +8,7 @@ response = "\n\n  The answer is: **42**  \n\n"
 # Hint: Use strip(), replace() or more strip()
 
 # Your code here:
-cleaned_response = "" 
+cleaned_response = response.strip().replace("**", "").replace("The answer is: ", "")
 print(f"Result: '{cleaned_response}'")
 
 
@@ -19,7 +19,7 @@ llm_output = "1. Apple\n2. Banana\n3. Cherry"
 # Hint: split() is your friend
 
 # Your code here:
-items = []
+items = [line.split(". ", 1)[1] for line in llm_output.split("\n")]
 print(f"Result: {items}")
 
 
@@ -31,8 +31,14 @@ constraints = ["be concise", "use bullet points", "max 100 words"]
 # Hint: Use f-strings and "\n".join() for the constraints
 
 # Your code here:
-prompt = ""
+constraints_text = "\n- ".join(constraints);
+prompt = f"You are {role}.\nYour task is to {task}.\nConstraints: \n- {constraints_text}"
 print(f"Result:\n{prompt}")
+
+#alternate way with numbers
+constraints = "\n".join(f"{i+1}. {c}" for i, c in enumerate(constraints))
+prompt = f"You are {role}.\nYour task is to {task}.\nConstraints: \n{constraints}"
+print(f"Result:\n{prompt}"  )
 
 
 print("\n--- Exercise 4: Validate Response Format ---")
@@ -43,6 +49,8 @@ response = "ANSWER: Paris"
 
 # Your code here:
 is_valid = False
+if response.startswith("ANSWER:"):
+    is_valid = True
 print(f"Is Valid: {is_valid}")
 
 
@@ -53,5 +61,5 @@ template = "Hello {name}, your order {order_id} is {status}."
 # Hint: Use .format() or f-string logic (though f-string needs vars defined first)
 
 # Your code here:
-final_message = ""
+final_message = template.format(name="John", order_id="12345", status="shipped")
 print(f"Result: {final_message}")

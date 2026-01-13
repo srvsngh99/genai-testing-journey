@@ -65,6 +65,7 @@ LLM testing is string manipulation at scale. Prompts are strings. Responses are 
 - String creation, methods, slicing
 - f-strings for prompt templates
 - Type conversion
+- **Bonus:** Basic functions & classes (just enough for project)
 
 **Mini-Project: `prompt-formatter`**
 ```
@@ -74,6 +75,8 @@ Build a prompt template engine that:
 ├── Supports multiple template formats
 └── Handles edge cases (special characters, unicode)
 ```
+
+> **Note:** Week 1's project requires basic functions and classes (Week  3 concepts). The week includes `practice/02_functions_and_classes.py` to teach "just enough" before the project starts.
 
 **Resources:**
 - 🎯 Corey Schafer: Python Strings (YouTube)
@@ -91,16 +94,21 @@ Test cases are lists. Results are dictionaries. Unique values need sets. This is
 - Dictionaries: key-value pairs, nested structures
 - Sets: unique values, set operations
 - Tuples: immutable sequences
+- **Bonus:** Basic functions intro (Day 3 - just enough for project)
 
-**Mini-Project: `test-case-manager`**
+**Mini-Project: `test-data-organizer` (Simplified)**
 ```
-Build a CLI tool that:
-├── Stores test cases as dictionaries
-├── Add, remove, update, search operations
-├── Filter by category, status, tags
-├── Export/import as JSON
-└── Basic statistics (count by category, etc.)
+Build a test case organizer (single Python file):
+├── Store test cases as list of dictionaries (in memory)
+├── Add, search, filter test cases
+├── Calculate statistics (pass rate, category breakdown)
+└── Simple menu-driven interface
+
+Note: JSON export/import moved to Week 5
+      Package structure moved to Week 4
 ```
+
+> **Improvement:** Unlike original plan, Week 2 now teaches basic functions on Day 3 before the project. No "surprise" prerequisites!
 
 ---
 
