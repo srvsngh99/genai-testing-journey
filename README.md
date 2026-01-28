@@ -167,14 +167,14 @@ For Staff/Principal engineering roles.
 
 | Phase | Weeks | Status | Progress |
 |-------|-------|--------|----------|
-| 🔵 Foundation | 1-8 | 🟡 In Progress | ███░░░░░░░ 37.5% |
+| 🔵 Foundation | 1-8 | 🟡 In Progress | █░░░░░░░░░ 12.5% |
 | 🟣 LLM Fundamentals | 9-18 | ⚪ Not Started | ░░░░░░░░░░ 0% |
 | 🟢 Evaluation Core | 19-28 | ⚪ Not Started | ░░░░░░░░░░ 0% |
 | 🟡 Frameworks Mastery | 29-38 | ⚪ Not Started | ░░░░░░░░░░ 0% |
 | 🟠 Agentic AI | 39-46 | ⚪ Not Started | ░░░░░░░░░░ 0% |
 | ⭐ Capstone | 47-52 | ⚪ Not Started | ░░░░░░░░░░ 0% |
 
-**Overall: Week 4/52** — 8% Complete
+**Overall: Week 2/52** — 2% Complete
 
 ---
 
@@ -219,7 +219,7 @@ genai-testing-journey/
 1. **⭐ Star the Repo** — The best way to follow the journey.
 2. **💬 Join Discussions** — Use the **Discussions tab** to share your weekly progress, find accountability partners, or ask questions.
 3. **🍴 Fork & Build** — Don't just read—build! Fork this repo and follow the weekly guides.
-4. **📺 Watch & Learn** — I break down complex GenAI testing concepts into simple explanations on [YouTube](https://www.youtube.com/@SouravsLab).
+4. **📺 Watch & Learn** — I break down complex GenAI testing concepts into simple explanations on [YouTube](https://www.youtube.com/@SouravAILabs).
 5. **🔗 Connect** — Share your wins on [LinkedIn](https://www.linkedin.com/in/srv-sngh).
 
 ### Community Stats
@@ -274,11 +274,11 @@ Special thanks to:
 
 <div align="center">
 
-**Week 4/52 — Building momentum with each completed week.**
+**Week 4/52— The journey of a thousand miles begins with a single step.**
 
 *Started: January 2026 | Target Completion: January 2027*
 
 [![LinkedIn](https://img.shields.io/badge/Follow_the_Journey-LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/srv-sngh)
-[![YouTube](https://img.shields.io/badge/Subscribe-YouTube-FF0000?style=for-the-badge&logo=youtube)](https://youtube.com/@SouravsLab)
+[![YouTube](https://img.shields.io/badge/Subscribe-YouTube-FF0000?style=for-the-badge&logo=youtube)](https://youtube.com/@SouravAILabs)
 
 </div>

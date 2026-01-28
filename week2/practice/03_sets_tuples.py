@@ -18,8 +18,12 @@ print("Intersection:", intersection)
 only_a = set_a - set_b
 print("Only in set_a:", only_a)
 
+# Union of both sets
+union = set_a | set_b
+print("Union:", union) 
+
 # Exercise 3: Fixed Data (Tuples)
-# Create a tuple representing a point (x, y) = (10, 20)
+# Create a tuple representing a point (x, y)
 point = (10, 20)
 print("Point:", point)
 

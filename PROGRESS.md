@@ -15,10 +15,10 @@ This document tracks my completion status for the **GenAI Testing Journey**.
 ## 📝 Detailed Checklist
 
 ### 🔵 Phase 0: Foundation
-- [x] **Week 1: Python Basics** - `prompt-formatter` ✅ COMPLETE
-- [x] **Week 2: Data Structures** - `test-case-manager` ✅ COMPLETE
-- [x] **Week 3: Functions & Control Flow** - `llm-response-validator` ✅ COMPLETE
-- [/] **Week 4: Modules & Packages** - `llm-test-utils` 🔄 IN PROGRESS
+- [x] **Week 1: Python Basics** - `prompt-formatter`
+- [x] **Week 2: Data Structures** - `test-case-manager`
+- [x] **Week 3: Functions & Control Flow** - `llm-response-validator`
+- [-] **Week 4: Modules & Packages** - `llm-test-utils`
 - [ ] **Week 5: File Handling & JSON** - `dataset-loader`
 - [ ] **Week 6: Error Handling & Logging** - `robust-api-caller`
 - [ ] **Week 7: pytest Fundamentals** - `test-suite-basics`

@@ -171,5 +171,5 @@ result6 = validate_response('{SUCCESS}', verbose=True)
 print(f"Result: {result6}\n")
 
 print("=" * 50)
-print("CHALLENGE COMPLETE! 🎉")
+print("CHALLENGE COMPLETE!")
 print("=" * 50)
