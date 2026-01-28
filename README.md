@@ -167,14 +167,14 @@ For Staff/Principal engineering roles.
 
 | Phase | Weeks | Status | Progress |
 |-------|-------|--------|----------|
-| 🔵 Foundation | 1-8 | 🟡 In Progress | █░░░░░░░░░ 12.5% |
+| 🔵 Foundation | 1-8 | 🟡 In Progress | ███░░░░░░░ 37.5% |
 | 🟣 LLM Fundamentals | 9-18 | ⚪ Not Started | ░░░░░░░░░░ 0% |
 | 🟢 Evaluation Core | 19-28 | ⚪ Not Started | ░░░░░░░░░░ 0% |
 | 🟡 Frameworks Mastery | 29-38 | ⚪ Not Started | ░░░░░░░░░░ 0% |
 | 🟠 Agentic AI | 39-46 | ⚪ Not Started | ░░░░░░░░░░ 0% |
 | ⭐ Capstone | 47-52 | ⚪ Not Started | ░░░░░░░░░░ 0% |
 
-**Overall: Week 2/52** — 2% Complete
+**Overall: Week 4/52** — 6% Complete
 
 ---
 
