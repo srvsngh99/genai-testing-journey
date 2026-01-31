@@ -1,6 +1,6 @@
-# 📘 Week 3: Control Flow & Functions
+# Week 3: Control Flow & Functions
 
-## 🎯 Week 3 Goal
+## Week 3 Goal
 By end of this week, you will:
 - Master `if/else` logic and Loops (`for`, `while`)
 - Learn **List Comprehensions** (Pythonic way to loop)
@@ -9,7 +9,7 @@ By end of this week, you will:
 
 ---
 
-## 📅 Daily Breakdown
+## Daily Breakdown
 
 | Day | Focus | Practice File | Status |
 |-----|-------|---------------|--------|
@@ -21,6 +21,19 @@ By end of this week, you will:
 | **Sat-Sun** | Mini-Project: `llm_response_validator.py` | | |
 
 **Total: 9 hours**
+
+---
+
+## Resources
+
+### YouTube
+- [Corey Schafer: Conditionals and Booleans](https://www.youtube.com/watch?v=DZwmZ8OtBWw)
+- [Corey Schafer: Loops and Iterations](https://www.youtube.com/watch?v=6iF8Xb7Z3wQ)
+- [Corey Schafer: Functions](https://www.youtube.com/watch?v=9Os0o3w8yB4)
+- [Corey Schafer: List Comprehensions](https://www.youtube.com/watch?v=3dt4PRnOE50)
+
+### Documentation
+- [Python Control Flow](https://docs.python.org/3/tutorial/controlflow.html)
 
 ---
 

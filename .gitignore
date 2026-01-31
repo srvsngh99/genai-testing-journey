@@ -46,3 +46,6 @@ db.sqlite3
 # Local Solutions (Not tracked)
 **/solutions/
 *_solution.py
+
+# Rules
+.rules/

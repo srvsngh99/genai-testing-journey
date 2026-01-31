@@ -1,6 +1,6 @@
-# 📦 Week 4: Modules, Packages & Virtual Environments
+# Week 4: Modules, Packages & Virtual Environments
 
-## 🎯 Week 4 Goal
+## Week 4 Goal
 By end of this week, you will:
 - Stop writing "single file" scripts and start building **Software Projects**.
 - Master **Modules** (Splitting code into files).
@@ -9,7 +9,7 @@ By end of this week, you will:
 
 ---
 
-## 📅 Daily Breakdown
+## Daily Breakdown
 
 | Day | Focus | Practice File | Status |
 |-----|-------|---------------|--------|
@@ -21,6 +21,18 @@ By end of this week, you will:
 | **Sat-Sun** | Mini-Project: `llm_test_utils` Package | | |
 
 **Total: 9 hours**
+
+---
+
+## Resources
+
+### YouTube
+- [Corey Schafer: Import Modules](https://www.youtube.com/watch?v=CqvZ3vGoGs0)
+- [Corey Schafer: Virtual Environments](https://www.youtube.com/watch?v=Kg1Yvry_Ydk)
+
+### Documentation
+- [Python Modules](https://docs.python.org/3/tutorial/modules.html)
+- [venv — Creation of virtual environments](https://docs.python.org/3/library/venv.html)
 
 ---
 
@@ -53,7 +65,7 @@ Week 4 is different. **You cannot just run the file.** You often need to create 
 
 ---
 
-## 📚 LEARNING TRACK
+# LEARNING TRACK
 
 ### Monday: Modules Basics (1 hour)
 

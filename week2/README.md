@@ -1,6 +1,6 @@
-# 📘 Week 2: Data Structures using Python
+# Week 2: Data Structures using Python
 
-## 🎯 Week 2 Goal
+## Week 2 Goal
 By end of this week, you will:
 - Master Lists, Dictionaries, Sets, and Tuples
 - Learn **basic functions** (just enough for the project)
@@ -9,7 +9,7 @@ By end of this week, you will:
 
 ---
 
-## 📅 Daily Breakdown
+## Daily Breakdown
 
 | Day | Focus | Practice File | Status |
 |-----|-------|---------------|--------|
@@ -21,6 +21,17 @@ By end of this week, you will:
 | **Sat-Sun** | Mini-Project: `test_data_organizer.py` | | |
 
 **Total: 9 hours**
+
+---
+
+## Resources
+
+### YouTube
+- [Corey Schafer: Lists, Tuples, and Sets](https://www.youtube.com/watch?v=W8KRzm-HUcc)
+- [Corey Schafer: Dictionaries - Key-Value Pairs](https://www.youtube.com/watch?v=daefaLgNkw0)
+
+### Documentation
+- [Python Data Structures](https://docs.python.org/3/tutorial/datastructures.html)
 
 ---
 
@@ -175,7 +186,7 @@ Challenge: Build a mini test case database using only data structures
 
 ---
 
-## ✅ Week 2 Deliverables
+## Week 2 Deliverables
 
 ### Practice Files
 - [ ] `week2/practice/01_lists.py`
@@ -187,4 +198,4 @@ Challenge: Build a mini test case database using only data structures
 ### Mini-Project
 - [ ] `week2/mini_project/test_data_organizer.py` (Ready to start next week!)
 
-**Keep Learning! 💪**
+**Keep Learning!**

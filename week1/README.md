@@ -23,6 +23,19 @@ By end of this week, you will:
 
 ---
 
+## Resources
+
+### YouTube
+- [Corey Schafer: Python Tutorial for Beginners 1 - Install and Setup](https://www.youtube.com/watch?v=YYXdXT2l-Gg)
+- [Corey Schafer: Python Tutorial for Beginners 2 - Strings](https://www.youtube.com/watch?v=k9TUPpGqYTo)
+- [Corey Schafer: Python String Formatting - f-Strings](https://www.youtube.com/watch?v=nghuHvKLhJA)
+
+### Documentation
+- [Python String Methods](https://docs.python.org/3/library/stdtypes.html#string-methods)
+- [f-strings guide](https://docs.python.org/3/reference/lexical_analysis.html#f-strings)
+
+---
+
 ## Practice Files Guide
 
 Week 1 has **TWO practice files** to cover everything for the mini-project:
@@ -34,7 +47,7 @@ Week 1 has **TWO practice files** to cover everything for the mini-project:
 - f-strings for formatting
 - **Time:** 1-2 hours (Mon-Tue)
 
-### File 2: `practice/02_functions_and_classes.py` ⭐
+### File 2: `practice/02_functions_and_classes.py`
 **Covers:** Prerequisites for mini-project (not in Week 1 syllabus!)
 - Functions: `def`, parameters, `return`
 - Type hints: `def func(text: str) -> bool:`
@@ -104,7 +117,7 @@ Instructions:
 print(system_prompt)
 ```
 
-### Monday Checkpoint ✅
+### Monday Checkpoint
 - [ ] Python installed and working
 - [ ] Can create variables
 - [ ] Understand f-strings
@@ -203,7 +216,7 @@ template = "Hello {name}, your order {order_id} is {status}."
 # Hint: Use .format() or f-strings
 ```
 
-### Tuesday Checkpoint ✅
+### Tuesday Checkpoint
 - [ ] Know all 8 key string methods
 - [ ] Completed all 5 exercises
 - [ ] Can explain when to use each method
@@ -269,7 +282,7 @@ def is_not_empty(response: str) -> bool:
     pass
 ```
 
-### Wednesday Checkpoint ✅
+### Wednesday Checkpoint
 - [ ] Built fill_template function
 - [ ] Built clean_response function
 - [ ] Built all 5 validators
@@ -277,7 +290,7 @@ def is_not_empty(response: str) -> bool:
 
 ---
 
-# 🔨 PROJECT TRACK
+## Week 1 Deliverables
 
 ## Thursday-Saturday: Build `prompt-formatter`
 
