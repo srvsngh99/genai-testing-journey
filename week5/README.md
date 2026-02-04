@@ -117,12 +117,22 @@ Review the concepts from the week. Ensure you can:
 ## Saturday-Sunday: Build `dataset-loader`
 
 **Mini-Project: `dataset-loader`**
+
+### Why this matters in AI testing?
+Prompt engineering is only half the battle; the other half is data. In production GenAI testing, you'll work with large datasets stored in JSON or JSONL formats (like fine-tuning data or batch evaluation logs). Mastering file handling allows you to automate the process of loading thousands of test cases, running them, and saving the results without manual intervention.
+
+### Learning Focus
+- Safe file I/O using Context Managers (`with`)
+- Parsing and generating JSON and JSONL data
+- cross-platform path handling with `pathlib`
+
+### Mini-Project Overview
+**A dataset manager that loads, validates, and saves test case data using modern Python file handling.**
+
 ```
-Build a dataset manager:
-├── Load test cases from JSONL
-├── Validate schema (required fields)
-├── Handle malformed entries gracefully
-├── Report statistics
-├── Save results back to JSONL
-└── Support for multiple dataset formats
+dataset-loader/
+├── datasets/               # Folder for JSON/JSONL samples
+├── dataset_loader.py       # Main logic for loading and saving
+├── schema_validator.py     # Logic to check JSON structure
+└── README.md               # Project specific instructions
 ```
