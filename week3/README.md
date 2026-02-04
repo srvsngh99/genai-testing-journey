@@ -5,22 +5,23 @@ By end of this week, you will:
 - Master `if/else` logic and Loops (`for`, `while`)
 - Learn **List Comprehensions** (Pythonic way to loop)
 - Deep Dive into **Functions** (*args, **kwargs, return values)
-- Build a **Validation Library** (Mini-Project)
+- Build `llm-response-validator` — a validation library
+- Push your third deliverable to GitHub
 
 ---
 
 ## Daily Breakdown
 
-| Day | Focus | Practice File | Status |
-|-----|-------|---------------|--------|
-| **Monday** | Control Flow (If, Loops) | `01_control_flow.py` | |
-| **Tuesday** | List Comprehensions | `02_list_comprehensions.py` | |
-| **Wednesday** | Functions Basics | `03_functions_basics.py` | |
-| **Thursday** | Advanced Functions (*args) | `04_functions_advanced.py` | |
-| **Friday** | Validation Logic Challenge | `05_validation_challenge.py` | |
-| **Sat-Sun** | Mini-Project: `llm_response_validator.py` | | |
-
-**Total: 9 hours**
+### Time Budget: 9 hours total
+| Day | Focus | Time |
+|-----|-------|------|
+| Monday | Learn: Control Flow (If, Loops) | 1 hr |
+| Tuesday | Learn: List Comprehensions | 1 hr |
+| Wednesday | Learn: Functions Basics | 1 hr |
+| Thursday | Learn: Advanced Functions (*args) | 1 hr |
+| Friday | Practice: Validation Logic Challenge | 1 hr |
+| Saturday | Project: Start `llm_response_validator.py` | 2 hrs |
+| Sunday | Project: Complete + Push to GitHub | 2 hrs |
 
 ---
 
@@ -41,40 +42,47 @@ By end of this week, you will:
 
 Week 3 has **FIVE practice files** building up to the mini-project:
 
-### 1. `practice/01_control_flow.py` (Monday)
+### File 1: `practice/01_control_flow.py` (Monday)
+**Covers:**
 - `if/elif/else` logic trees
-- `for` loops over lists/dicts
-- `while` loops (waiting for input)
+- `for` loops and `while` loops
 - `break` and `continue`
+- **Time:** 1 hour
 
-### 2. `practice/02_list_comprehensions.py` (Tuesday)
+### File 2: `practice/02_list_comprehensions.py` (Tuesday)
+**Covers:**
 - Turning loops into one-liners
 - Filtering logic inside lists
 - Transformation logic
+- **Time:** 1 hour
 
-### 3. `practice/03_functions_basics.py` (Wednesday)
+### File 3: `practice/03_functions_basics.py` (Wednesday)
+**Covers:**
 - Defining functions with `def`
 - Arguments and Parameters
 - Return statements vs Printing
-- Docstrings
+- **Time:** 1 hour
 
-### 4. `practice/04_functions_advanced.py` (Thursday)
+### File 4: `practice/04_functions_advanced.py` (Thursday)
+**Covers:**
 - Default arguments
-- `*args` (Variable positional arguments)
-- `**kwargs` (Variable keyword arguments)
+- `*args` and `**kwargs`
 - Scope (Global vs Local)
+- **Time:** 1 hour
 
-### 5. `practice/05_validation_challenge.py` (Friday)
+### File 5: `practice/05_validation_challenge.py` (Friday)
+**Covers:**
 - Building small validation functions
-- chaining functions together
-- simulating LLM response validation
+- Chaining functions together
+- **Time:** 1 hour
 
 ---
 
-# 📚 LEARNING TRACK
+# LEARNING TRACK
 
 ## Monday: Control Flow (1 hour)
 
+### Practice Exercises
 Create `week3/practice/01_control_flow.py`:
 
 ```python
@@ -97,10 +105,15 @@ models = ["gpt-4", "gpt-3.5", "claude-3", "llama-2"]
 #   If retries == 2, print "Success!" and break
 ```
 
+### Monday Checkpoint
+- [ ] Understand `break` vs `continue`
+- [ ] Can write basic if/else logic
+
 ---
 
 ## Tuesday: List Comprehensions (1 hour)
 
+### Practice Exercises
 Create `week3/practice/02_list_comprehensions.py`:
 
 ```python
@@ -120,10 +133,15 @@ responses = ["Error: Timeout", "Success", "Error: 500", "Success"]
 # Result: ["Odd", "Even", "Odd", "Even", "Odd"]
 ```
 
+### Tuesday Checkpoint
+- [ ] Can write a list comprehension
+- [ ] Understand the syntax `[x for x in list if condition]`
+
 ---
 
 ## Wednesday: Functions Basics (1 hour)
 
+### Practice Exercises
 Create `week3/practice/03_functions_basics.py`:
 
 ```python
@@ -141,10 +159,15 @@ Create `week3/practice/03_functions_basics.py`:
 # Then print that result outside the function.
 ```
 
+### Wednesday Checkpoint
+- [ ] Know difference between Return and Print
+- [ ] Can pass arguments to functions
+
 ---
 
 ## Thursday: Advanced Functions (1 hour)
 
+### Practice Exercises
 Create `week3/practice/04_functions_advanced.py`:
 
 ```python
@@ -163,10 +186,15 @@ Create `week3/practice/04_functions_advanced.py`:
 # Call with temperature=0.2 and verbose=True
 ```
 
+### Thursday Checkpoint
+- [ ] Understand `*args` for variable inputs
+- [ ] Understand default parameters
+
 ---
 
 ## Friday: Validation Challenge (1 hour)
 
+### Practice Exercises
 Create `week3/practice/05_validation_challenge.py`:
 
 ```python
@@ -188,14 +216,14 @@ Challenge: Build a Mini-Validator Library
 
 ## Week 3 Deliverables
 
-### Practice Files
-- [x] `week3/practice/01_control_flow.py` - COMPLETE
-- [x] `week3/practice/02_list_comprehensions.py` - COMPLETE
-- [x] `week3/practice/03_functions_basics.py` - COMPLETE
-- [x] `week3/practice/04_functions_advanced.py` - COMPLETE
-- [x] `week3/practice/05_validation_challenge.py` - COMPLETE
+## Saturday-Sunday: Build `llm-response-validator`
 
-### Mini-Project
-- [x] `week3/mini_project/llm_response_validator.py` - COMPLETE
-
-**Week 3 Status: COMPLETE - Ready for Week 4!**
+**Mini-Project: `llm-response-validator`**
+```
+Build validation functions:
+├── validate_not_empty(response)
+├── validate_max_length(response, limit)
+├── validate_contains_keywords(response, keywords)
+├── validate_json_format(response)
+└── validate_no_pii(response)  # Basic patterns
+```

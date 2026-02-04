@@ -1,26 +1,26 @@
-# Week 2: Data Structures using Python
+# Week 2: Data Structures — Lists, Dicts, Sets
 
 ## Week 2 Goal
 By end of this week, you will:
 - Master Lists, Dictionaries, Sets, and Tuples
 - Learn **basic functions** (just enough for the project)
-- Build a Test Case Manager (Mini-Project)
+- Build `test-data-organizer` — a simple test case manager
 - Push your second deliverable to GitHub
 
 ---
 
 ## Daily Breakdown
 
-| Day | Focus | Practice File | Status |
-|-----|-------|---------------|--------|
-| **Monday** | Lists (Creation, Methods, Iteration) | `01_lists.py` | |
-| **Tuesday** | Dictionaries & Nested Structures | `02_dicts_nested.py` | |
-| **Wednesday** | Sets & Tuples | `03_sets_tuples.py` | |
-| **Thursday** | **Quick Functions Intro** | `04_functions_intro.py` | |
-| **Friday** | Integration Challenge | `05_data_structures_challenge.py` | |
-| **Sat-Sun** | Mini-Project: `test_data_organizer.py` | | |
-
-**Total: 9 hours**
+### Time Budget: 9 hours total
+| Day | Focus | Time |
+|-----|-------|------|
+| Monday | Learn: Lists (Creation, Methods, Iteration) | 1 hr |
+| Tuesday | Learn: Dictionaries & Nested Structures | 1 hr |
+| Wednesday | Learn: Sets & Tuples | 1 hr |
+| Thursday | Practice: Functions Intro | 1 hr |
+| Friday | Practice: Integration Challenge | 1 hr |
+| Saturday | Project: Start `test-data-organizer` | 2 hrs |
+| Sunday | Project: Complete + Push to GitHub | 2 hrs |
 
 ---
 
@@ -39,38 +39,51 @@ By end of this week, you will:
 
 Week 2 has **FIVE practice files** building up to the mini-project:
 
-### 1. `practice/01_lists.py` (Monday)
+### File 1: `practice/01_lists.py` (Monday)
+**Covers:**
 - Basic list operations (Grocery List example)
 - Indexing, slicing, and methods
 - Iteration and comprehensions
+- **Time:** 1 hour
 
-### 2. `practice/02_dicts_nested.py` (Tuesday)
+### File 2: `practice/02_dicts_nested.py` (Tuesday)
+**Covers:**
 - Dictionary CRUD operations (User Profile example)
 - Nested dictionaries (Company structure)
 - Lists of dictionaries
+- **Time:** 1 hour
 
-### 3. `practice/03_sets_tuples.py` (Wednesday)
+### File 3: `practice/03_sets_tuples.py` (Wednesday)
+**Covers:**
 - Sets for unique items (Deduplication)
 - Tuples for immutable data (Coordinates)
-- Basic set operations (Intersection, Difference)
+- Basic set operations
+- **Time:** 1 hour
 
-### 4. `practice/04_functions_intro.py` (Thursday)
+### File 4: `practice/04_functions_intro.py` (Thursday)
+**Covers:**
 - Function definition and calling
 - Parameters and return values
-- Simple formatting functions
+- **Time:** 1 hour
 
-### 5. `practice/05_data_structures_challenge.py` (Friday)
+### File 5: `practice/05_data_structures_challenge.py` (Friday)
+**Covers:**
 - Combining lists, dicts, and loops
-- Using specific functions to organize logic (Bridge to mini-project)
 - Building a mini "database" in memory
-- Filtering and basic analysis
+- **Time:** 1 hour
 
 ---
 
-# 📚 LEARNING TRACK
+# LEARNING TRACK
 
 ## Monday: Lists (1 hour)
 
+### Watch These Videos (XX mins)
+1. **Corey Schafer: Lists, Tuples, and Sets**
+   - URL: https://www.youtube.com/watch?v=W8KRzm-HUcc
+   - Focus on: First 20 minutes (Lists)
+
+### Practice Exercises
 Create `week2/practice/01_lists.py`:
 
 ```python
@@ -96,10 +109,20 @@ grades = [85, 92, 78, 95, 88]
 # Create a new list called 'ui_tests' that only contains names with "ui" or "api"
 ```
 
+### Monday Checkpoint
+- [ ] Understand lists vs arrays
+- [ ] Can slice lists confidently
+- [ ] Can iterate using for loops
+
 ---
 
 ## Tuesday: Dictionaries & Nested Structures (1 hour)
 
+### Watch These Videos
+1. **Corey Schafer: Dictionaries**
+   - URL: https://www.youtube.com/watch?v=daefaLgNkw0
+
+### Practice Exercises
 Create `week2/practice/02_dicts_nested.py`:
 
 ```python
@@ -125,10 +148,19 @@ company = {
 # Calculate the average score
 ```
 
+### Tuesday Checkpoint
+- [ ] Understand Key-Value pairs
+- [ ] Can nested dictionaries
+- [ ] Can access data safely with .get()
+
 ---
 
 ## Wednesday: Sets & Tuples (1 hour)
 
+### Watch These Videos
+1. **Corey Schafer: Lists, Tuples, and Sets** (Finish the video)
+
+### Practice Exercises
 Create `week2/practice/03_sets_tuples.py`:
 
 ```python
@@ -148,10 +180,15 @@ set_b = {3, 4, 5, 6}
 # Unpack the tuple into two variables
 ```
 
+### Wednesday Checkpoint
+- [ ] Know when to use a Set vs List
+- [ ] Understand Tuple immutability
+
 ---
 
 ## Thursday: Functions Intro (1 hour)
 
+### Practice Exercises
 Create `week2/practice/04_functions_intro.py`:
 
 ```python
@@ -170,6 +207,7 @@ Create `week2/practice/04_functions_intro.py`:
 
 ## Friday: Practice Challenge (1 hour)
 
+### Practice Exercises
 Create `week2/practice/05_data_structures_challenge.py`:
 
 ```python
@@ -188,14 +226,16 @@ Challenge: Build a mini test case database using only data structures
 
 ## Week 2 Deliverables
 
-### Practice Files
-- [ ] `week2/practice/01_lists.py`
-- [ ] `week2/practice/02_dicts_nested.py`
-- [ ] `week2/practice/03_sets_tuples.py`
-- [ ] `week2/practice/04_functions_intro.py`
-- [ ] `week2/practice/05_data_structures_challenge.py`
+## Saturday-Sunday: Build `test-data-organizer`
 
-### Mini-Project
-- [ ] `week2/mini_project/test_data_organizer.py` (Ready to start next week!)
+**Mini-Project: `test-data-organizer` (Simplified)**
+```
+Build a test case organizer (single Python file):
+├── Store test cases as list of dictionaries (in memory)
+├── Add, search, filter test cases
+├── Calculate statistics (pass rate, category breakdown)
+└── Simple menu-driven interface
 
-**Keep Learning!**
+Note: JSON export/import moved to Week 5
+      Package structure moved to Week 4
+```
