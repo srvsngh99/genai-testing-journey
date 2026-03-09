@@ -26,7 +26,7 @@ By end of this week, you will:
 ## Resources
 
 ### YouTube
-- [Corey Schafer: Pytest - Unit Testing Fundamentals](https://www.youtube.com/watch?v=yYfG7QWlEUA)
+- [freeCodeCamp: Pytest Tutorial - How to Test Python Code](https://www.youtube.com/watch?v=cHYq1MRoyI0)
 
 ### Documentation
 - [pytest Documentation](https://docs.pytest.org/en/latest/)
@@ -69,8 +69,8 @@ Week 7 has 4 practice files to cover everything for the mini-project:
 ## Monday: pytest Basics (1 hour)
 
 ### Watch These Videos
-1. **Corey Schafer: Pytest Fundamentals**
-   - URL: https://www.youtube.com/watch?v=yYfG7QWlEUA
+1. **freeCodeCamp: Pytest Tutorial**
+   - URL: https://www.youtube.com/watch?v=cHYq1MRoyI0
    - Why: Understand the power of pytest and how it differs from unittest.
 
 ### Practice Exercises
