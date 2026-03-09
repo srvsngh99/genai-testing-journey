@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Week](https://img.shields.io/badge/Current_Week-7%2F52-blue?style=for-the-badge)
+![Week](https://img.shields.io/badge/Current_Week-9%2F52-blue?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-In_Progress-green?style=for-the-badge)
 ![Followers](https://img.shields.io/badge/Community-Growing-orange?style=for-the-badge)
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube)](https://youtube.com/@SouravAILabs)
@@ -168,14 +168,14 @@ For Staff/Principal engineering roles.
 
 | Phase | Weeks | Status | Progress |
 |-------|-------|--------|----------|
-| 🔵 Foundation | 1-8 | 🟡 In Progress | ████████░░ 87.5% |
-| 🟣 LLM Fundamentals | 9-18 | ⚪ Not Started | ░░░░░░░░░░ 0% |
+| 🔵 Foundation | 1-8 | 🟢 Completed | ██████████ 100% |
+| 🟣 LLM Fundamentals | 9-18 | 🟡 In Progress | ░░░░░░░░░░ 0% |
 | 🟢 Evaluation Core | 19-28 | ⚪ Not Started | ░░░░░░░░░░ 0% |
 | 🟡 Frameworks Mastery | 29-38 | ⚪ Not Started | ░░░░░░░░░░ 0% |
 | 🟠 Agentic AI | 39-46 | ⚪ Not Started | ░░░░░░░░░░ 0% |
 | ⭐ Capstone | 47-52 | ⚪ Not Started | ░░░░░░░░░░ 0% |
 
-**Overall: Week 7/52** — 13.5% Complete
+**Overall: Week 9/52** — 17.3% Complete
 
 ---
 
@@ -275,7 +275,7 @@ Special thanks to:
 
 <div align="center">
 
-**Week 7/52— The journey of a thousand miles begins with a single step.**
+**Week 9/52— The journey of a thousand miles begins with a single step.**
 
 *Started: January 2026 | Target Completion: January 2027*
 

@@ -262,7 +262,7 @@ Enhance your test suite:
 - [x] Understand modules and packages
 - [x] Comfortable with JSON/file handling
 - [x] Can write pytest tests with fixtures
-- [x] Have 7 mini-projects on GitHub
+- [x] Have 8 mini-projects on GitHub
 
 ---
 

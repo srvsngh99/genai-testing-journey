@@ -4,9 +4,9 @@ This document tracks my completion status for the **GenAI Testing Journey**.
 
 ## 📊 Summary
 | Phase | Weeks | Status | Progress |
-|-------|-------|--------|----------|
-| 🔵 Foundation | 1-8 | 🟡 In Progress | 87.5% |
-| 🟣 LLM Fundamentals | 9-18 | ⚪ Not Started | 0% |
+|-------|-------|--------|---------|
+| 🔵 Foundation | 1-8 | 🟢 Completed | 100% |
+| 🟣 LLM Fundamentals | 9-18 | 🟡 In Progress | 0% |
 | 🟢 Evaluation Core | 19-28 | ⚪ Not Started | 0% |
 | 🟡 Frameworks Mastery | 29-38 | ⚪ Not Started | 0% |
 | 🟠 Agentic AI | 39-46 | ⚪ Not Started | 0% |
@@ -22,10 +22,10 @@ This document tracks my completion status for the **GenAI Testing Journey**.
 - [x] **Week 5: File Handling & JSON** - `dataset-loader`
 - [x] **Week 6: Error Handling & Logging** - `robust-api-caller`
 - [x] **Week 7: pytest Fundamentals** - `test-suite-basics`
-- [ ] **Week 8: pytest Advanced** - `parametrized-test-suite`
+- [x] **Week 8: pytest Advanced** - `parametrized-test-suite`
 
 ### 🟣 Phase 1: LLM Fundamentals
-- [ ] **Week 9: How LLMs Work** - `llm-concepts-notebook`
+- [ ] **Week 9: How LLMs Work** - `llm-concepts-notebook` 🟢 (Current)
 - [ ] **Week 10: Transformers & Attention** - `attention-explainer`
 - [ ] **Week 11: Tokenization Deep Dive** - `tokenizer-explorer`
 - [ ] **Week 12: OpenAI API** - `openai-test-client`
