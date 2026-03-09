@@ -110,9 +110,10 @@ LLM APIs are prone to timeouts, rate limits, and transient failures. A tester mu
 
 ### Learning Focus
 - Strategic use of try/except for API calls
+- modern `requests` library
 - Comprehensive logging for request/response tracking
 - Custom exceptions for different API failure modes
-- Resilience patterns (retry logic)
+- Resilience patterns (retry logic targeting 5xx errors)
 
 ### Mini-Project Overview
 **A resilient HTTP caller utility for LLM APIs with built-in logging and error recovery.**

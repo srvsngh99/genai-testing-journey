@@ -1,7 +1,6 @@
 """A resilient API client that retries on failure."""
 import time
-import urllib.request
-import urllib.error
+import requests
 
 from .exceptions import APIError, APITimeoutError, APIResponseError
 from .logger_config import setup_logger
@@ -9,8 +8,9 @@ from .logger_config import setup_logger
 logger = setup_logger("API_Client")
 
 class ResilientAPIClient:
-    def __init__(self, base_url):
+    def __init__(self, base_url, timeout=3):
         self.base_url = base_url
+        self.timeout = timeout
 
     def get(self, endpoint, retries=3):
         url = self.base_url + endpoint
@@ -19,26 +19,35 @@ class ResilientAPIClient:
             try:
                 logger.info(f"Attempt {attempt}: Calling {url}")
                 
-                # Basic urllib call
-                req = urllib.request.Request(url, headers={'User-Agent': 'TestClient'})
-                response = urllib.request.urlopen(req, timeout=3)
+                # Modern requests call
+                response = requests.get(url, headers={'User-Agent': 'TestClient'}, timeout=self.timeout)
+                
+                # Raise an HTTPError if the HTTP request returned an unsuccessful status code
+                response.raise_for_status()
                 
                 logger.info("Call successful!")
-                return response.read().decode('utf-8')
+                return response.json()
                 
-            except urllib.error.HTTPError as e:
-                logger.error(f"HTTP Error {e.code}: {e.reason}")
-                if attempt == retries:
-                    raise APIResponseError("Max retries reached on HTTP error.", e.code)
+            except requests.exceptions.HTTPError as e:
+                status_code = e.response.status_code
+                logger.error(f"HTTP Error {status_code}: {e}")
+                
+                # Do not retry on 4xx errors (client errors), raise immediately
+                if 400 <= status_code < 500:
+                    raise APIResponseError("Client Error - Bad Request", status_code)
                     
-            except (urllib.error.URLError, TimeoutError) as e:
+                # Retry on 5xx errors (server errors), but raise if max retries reached
+                if attempt == retries:
+                    raise APIResponseError("Max retries reached on Server Error.", status_code)
+                    
+            except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as e:
                 logger.error(f"Timeout/Network Error: {e}")
                 if attempt == retries:
                     raise APITimeoutError("Request timed out or network failed.")
                     
-            except Exception as e:
-                logger.error(f"Unexpected error: {e}")
-                raise APIError("Something went very wrong.")
+            except requests.exceptions.RequestException as e:
+                logger.error(f"Unexpected request error: {e}")
+                raise APIError("Something went very wrong with the request.")
             
             # Exponential backoff sleep before trying again
             sleep_time = 2 ** attempt
