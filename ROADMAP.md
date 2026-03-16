@@ -286,14 +286,14 @@ You need intuition for WHY LLMs behave the way they do. This informs all testing
 - Probability and sampling
 - Why "temperature" matters
 
+**Outcome:** Explain temperature, sampling, tokenization, and context windows from a tester's perspective.
+
 **Mini-Project: `llm-concepts-notebook`**
 ```
-Create a Jupyter notebook documenting:
-├── Key LLM concepts in your own words
-├── Diagrams/visualizations
-├── Examples that demonstrate each concept
-├── Common misconceptions
-└── Testing implications for each
+Build two reusable utilities:
+├── Token generation simulator with temperature control
+├── Prompt analyzer (token estimation, context window checks)
+└── Run demos comparing different settings
 ```
 
 **Resources:**
@@ -315,11 +315,10 @@ Attention is the core mechanism. Understanding it helps you understand failure m
 
 **Mini-Project: `attention-explainer`**
 ```
-Create educational content:
-├── Visual explanation of attention
-├── Code demo showing attention weights
-├── Examples of attention patterns
-└── How this relates to testing
+Build two reusable utilities:
+├── Prompt position variant generator (start/middle/end)
+├── ASCII attention heatmap visualizer
+└── Run demos for 'lost in the middle' testing prep
 ```
 
 **Resources:**
@@ -331,102 +330,113 @@ Create educational content:
 ### Week 11: Tokenization Deep Dive
 
 **Why This Matters:**
-Tokenization causes many "weird" LLM behaviors. Understanding it prevents confusion during testing.
+Token counting drives cost, context window management, and truncation strategy. Understanding tokenization prevents confusion during testing and helps you design cost-effective test suites.
 
 **Learning Focus:**
 - BPE (Byte Pair Encoding)
-- tiktoken library
-- Token limits and truncation
+- Token counting with tiktoken (OpenAI) and Anthropic token-count API
+- Truncation strategies and context window management
+- Cost implications of token usage
+- Why token limits matter for test design
 - Why "strawberry" letter counting fails
-- Tokenization edge cases
 
 **Mini-Project: `tokenizer-explorer`**
 ```
-Build an interactive tokenizer tool:
-├── Tokenize any text
-├── Show token count
-├── Visualize token boundaries
-├── Compare tokenizers (GPT vs Claude)
-├── Document edge cases found
-└── Testing implications
+Build two reusable utilities:
+├── Token counter (accurate counts with tiktoken)
+├── Cost estimator (compare pricing across providers)
+└── Run demos for test suite budgeting
 ```
+
+**Resources:**
+- 🎯 tiktoken: [github.com/openai/tiktoken](https://github.com/openai/tiktoken)
+- 🎯 Anthropic Token Counting: [docs.anthropic.com/en/docs/build-with-claude/token-counting](https://docs.anthropic.com/en/docs/build-with-claude/token-counting)
 
 ---
 
 ### Week 12: OpenAI API — Your First LLM Integration
 
 **Why This Matters:**
-You'll test LLM APIs constantly. Start with the most common one.
+You'll test LLM APIs constantly. Start with the most widely used one.
 
 **Learning Focus:**
 - API setup and authentication
-- Chat completions endpoint
-- Messages format (system, user, assistant)
+- **Responses API** as the modern default (released March 2025)
+- Structured Outputs with `strict: true` (not basic JSON mode)
+- Tool/Function calling basics
+- Chat Completions as secondary/compatibility interface
 - Parameters (temperature, max_tokens, etc.)
 - Response parsing
+- Model references: GPT-5.x family (GPT-5.4 current)
+
+> **Note:** The Assistants API was deprecated August 2025 (sunset August 2026). Use the Responses API for all new work.
 
 **Mini-Project: `openai-test-client`**
 ```
-Build an OpenAI API wrapper:
-├── Clean interface for chat completions
-├── Parameter configuration
-├── Response parsing and validation
-├── Error handling
-├── Request/response logging
-└── Basic retry logic
+Build a reusable API client:
+├── LLM client wrapping Responses API with retries
+├── Structured output parser for reliable assertions
+└── Demo: simple calls, instructions, and structured output
 ```
+
+**Resources:**
+- 🎯 OpenAI Responses API: [platform.openai.com/docs/api-reference/responses](https://platform.openai.com/docs/api-reference/responses)
+- 🎯 Structured Outputs: [platform.openai.com/docs/guides/structured-outputs](https://platform.openai.com/docs/guides/structured-outputs)
+- 🎯 Function Calling: [platform.openai.com/docs/guides/function-calling](https://platform.openai.com/docs/guides/function-calling)
 
 ---
 
-### Week 13: Anthropic Claude API — Multi-Provider Testing
+### Week 13: Multi-Provider Client — OpenAI, Anthropic & Google
 
 **Why This Matters:**
-Real testing often compares models. You need to work with multiple providers.
+Real testing compares models across providers. You need a unified interface for all Tier 1 providers.
 
 **Learning Focus:**
-- Claude API differences from OpenAI
-- Messages format for Claude
-- Claude-specific features
+- Anthropic Claude 4.x family (Opus 4.6, Sonnet 4.6)
+- Google Gemini API (Gemini 3.1 Pro) as third Tier 1 provider
+- Provider normalization: consistent response schema, error taxonomy
 - API design patterns across providers
+- Cost-effective alternatives: DeepSeek, Mistral (awareness)
+- Multi-provider gateway concept (LiteLLM)
 
 **Mini-Project: `multi-provider-client`**
 ```
-Extend your client to support both:
-├── Abstract interface for LLM calls
-├── OpenAI implementation
-├── Anthropic implementation
-├── Consistent response format
-├── Provider-specific config handling
-└── Easy to add new providers
+Build a unified LLM client:
+├── Provider implementations (OpenAI, Anthropic, Gemini)
+├── Unified client with common interface and mock fallback
+└── Demo: call all providers with one function
 ```
+
+**Resources:**
+- 🎯 Anthropic Messages API: [docs.anthropic.com/en/api/messages](https://docs.anthropic.com/en/api/messages)
+- 🎯 Google Gemini API: [ai.google.dev/gemini-api/docs](https://ai.google.dev/gemini-api/docs)
 
 ---
 
-### Week 14: Prompt Engineering Fundamentals
+### Week 14: Prompt Engineering for Evaluation
 
 **Why This Matters:**
-Testing prompts requires understanding prompting. You'll evaluate prompt quality constantly.
+Testing prompts requires understanding prompting. You'll design evaluation prompts and test prompt quality constantly.
 
 **Learning Focus:**
 - Zero-shot vs few-shot prompting
-- Chain-of-thought (CoT)
 - System prompts and their role
-- Prompt structure best practices
+- Prompt versioning and tracking changes
+- Evaluation sets: testing prompt variants against labeled data
+- Regression checks for prompt changes
 - Common prompting mistakes
 
 **Mini-Project: `prompt-tester`**
 ```
-Build a prompt experimentation tool:
-├── Define prompt variants
-├── Run each against test inputs
-├── Collect and compare outputs
-├── Basic scoring (length, contains expected)
-└── Report best performing prompts
+Build a prompt comparison tool:
+├── Prompt runner (fills templates, calls LLM or mock)
+├── Output scorer (length, keywords, format)
+└── Demo: compare prompt variants and pick the best
 ```
 
 **Resources:**
-- 🎯 promptingguide.ai
-- 🎯 Anthropic Prompt Engineering docs
+- 🎯 Anthropic Prompt Engineering: [docs.anthropic.com/en/docs/build-with-claude/prompt-engineering](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering)
+- 🎯 OpenAI Prompt Engineering: [platform.openai.com/docs/guides/prompt-engineering](https://platform.openai.com/docs/guides/prompt-engineering)
 
 ---
 
@@ -437,20 +447,22 @@ This is the #1 thing you'll test for. Understand it deeply.
 
 **Learning Focus:**
 - What is hallucination?
+- Intrinsic vs extrinsic hallucination
 - Types: factual, reasoning, citation
 - Why hallucinations occur
-- Examples and patterns
+- Faithfulness metrics (intro)
 - Detection approaches
 
 **Mini-Project: `hallucination-examples`**
 ```
-Create a hallucination catalog:
-├── Collect 20+ real hallucination examples
-├── Categorize by type
-├── Document reproduction steps
-├── Hypothesize causes
-└── Suggest detection methods
+Build a hallucination test dataset:
+├── Labeled test cases (factual, reasoning, citation)
+├── Simple detector with keyword-based grading
+└── Demo: run test suite and report pass/fail rates
 ```
+
+**Resources:**
+- 🎯 OpenAI Evaluation Best Practices: [platform.openai.com/docs/guides/evaluation-best-practices](https://platform.openai.com/docs/guides/evaluation-best-practices)
 
 ---
 
@@ -469,66 +481,73 @@ Non-determinism is a testing nightmare. Learn to handle it.
 **Mini-Project: `consistency-tester`**
 ```
 Build a consistency analysis tool:
-├── Run same prompt N times
-├── Measure output variation
-├── Statistical analysis (variance, similarity)
-├── Visualize consistency
-└── Threshold recommendations
+├── Runner (same prompt N times, collect outputs)
+├── Analyzer (word overlap, consistency score, verdict)
+└── Demo: measure output variation and recommend thresholds
 ```
 
 ---
 
-### Week 17: LLM Failure Modes — Part 3 (Edge Cases)
+### Week 17: LLM Failure Modes — Part 3 (Edge Cases & Adversarial Inputs)
 
 **Why This Matters:**
-QA mindset shines here. Apply your edge case thinking to LLMs.
+QA mindset shines here. Apply your edge case thinking to LLMs, and start thinking about security.
 
 **Learning Focus:**
 - Input edge cases (empty, very long, special chars)
-- Language edge cases (non-English, code-switching)
-- Format edge cases (structured output failures)
-- Context edge cases (conflicting information)
-- Boundary testing for LLMs
+- Unicode weirdness, long-context failures
+- Format edge cases (schema breakage, malformed tool arguments)
+- Prompt injection basics (direct and indirect)
+- Jailbreak awareness (not deep dive — that's the optional security track)
+- PII leakage testing basics
+- OWASP LLM Top 10 2025 awareness (as reference, not deep dive)
+
+> **Note:** This is the FIRST introduction of security thinking. It's woven throughout later phases.
 
 **Mini-Project: `edge-case-generator`**
 ```
 Build an edge case test generator:
-├── Categories of edge cases
-├── Generate test inputs programmatically
-├── Run against LLM
-├── Detect failures
-└── Report problematic patterns
+├── Input generators (empty, long, unicode, special chars)
+├── Prompt injection test cases (direct and indirect)
+└── Demo: generate full test suite with categories
 ```
+
+**Resources:**
+- 🎯 OWASP LLM Top 10 2025: [genai.owasp.org/llm-top-10/](https://genai.owasp.org/llm-top-10/)
+- 🎯 Promptfoo Red Team Guide: [promptfoo.dev/docs/red-team/](https://www.promptfoo.dev/docs/red-team/)
 
 ---
 
-### Week 18: LangChain Basics — Understanding Chains
+### Week 18: LLM Workflows — LangChain & LangGraph Basics
 
 **Why This Matters:**
-Many LLM applications use LangChain. Testing chains requires understanding them.
+Many LLM applications use LangChain or LangGraph. Testing these workflows requires understanding them.
 
 **Learning Focus:**
-- What is LangChain?
-- PromptTemplates
-- Chains and composition
-- Output parsers
-- When to use LangChain vs raw API
+- LangChain 1.0+ patterns (released November 2025)
+- LangGraph awareness (the production agent standard)
+- Tracing basics with LangSmith
+- When to use LangChain vs raw API vs LangGraph
+
+> **Note:** AgentExecutor, LLMChain, and ConversationBufferMemory are deprecated in LangChain 1.0. Use LCEL (LangChain Expression Language) and LangGraph instead.
 
 **Mini-Project: `simple-chain-tester`**
 ```
-Build and test a LangChain application:
-├── Create a simple chain
-├── Write tests for the chain
-├── Test intermediate outputs
-├── Handle chain failures
-└── Compare chain vs raw API
+Build and test an LCEL chain:
+├── Chain builder (LCEL prompt | model | parser)
+├── Tester (compare chain output vs raw API output)
+└── Demo: run chain and measure quality difference
 ```
+
+**Resources:**
+- 🎯 LangChain 1.0 Migration: [python.langchain.com/docs/versions/migrating_chains/](https://python.langchain.com/docs/versions/migrating_chains/)
+- 🎯 LangGraph Overview: [langchain-ai.github.io/langgraph/](https://langchain-ai.github.io/langgraph/)
 
 **🎯 Phase 1 Checkpoint:**
 - [ ] Can explain how LLMs work (in simple terms)
-- [ ] Comfortable with OpenAI and Claude APIs
-- [ ] Understand tokenization implications
-- [ ] Know the major failure modes
+- [ ] Comfortable with OpenAI, Claude, and Gemini APIs
+- [ ] Understand tokenization and cost implications
+- [ ] Know the major failure modes (including adversarial inputs)
 - [ ] Have built multi-provider LLM client
 - [ ] 10 more mini-projects on GitHub (18 total)
 
@@ -621,21 +640,25 @@ Build a semantic similarity evaluator:
 ### Week 22: LLM-as-Judge — Using AI to Evaluate AI
 
 **Why This Matters:**
-This is the most powerful modern evaluation technique. Understand it deeply.
+This is the DOMINANT evaluation paradigm. Understand it deeply.
 
 **Learning Focus:**
 - What is LLM-as-Judge?
 - G-Eval methodology
-- Designing evaluation prompts
-- Scoring rubrics
+- Chain-of-thought reasoning in judges (10-15% reliability improvement)
+- Position bias mitigation (evaluate in both orders)
+- Structured rubrics with explicit score definitions
+- Inter-judge reliability metrics (Cohen's Kappa)
 - Biases in LLM judges
 
 **Mini-Project: `llm-judge`**
 ```
 Build an LLM-based evaluator:
-├── Create evaluation prompts for different criteria
-├── Implement scoring (1-5 scale)
+├── Create evaluation prompts with CoT reasoning
+├── Implement scoring (1-5 scale) with rubrics
 ├── Test on sample outputs
+├── Position bias test (swap order, compare scores)
+├── Calculate inter-judge agreement (Cohen's Kappa)
 ├── Compare to human judgments
 ├── Measure judge consistency
 └── Document biases observed
@@ -658,6 +681,7 @@ RAG (Retrieval-Augmented Generation) is everywhere. You must understand it to te
 - Generation: context injection
 - The retrieval-generation pipeline
 - Where RAG can fail
+- Vector/embedding security awareness (OWASP LLM Top 10 #8)
 
 **Mini-Project: `simple-rag`**
 ```
@@ -681,6 +705,7 @@ RAG has TWO systems to test: retrieval AND generation. Start with retrieval.
 - Context recall
 - Retrieval relevance
 - Top-K evaluation
+- RAGAS 0.4.x metrics (30+ metrics available)
 - Ground truth for retrieval
 
 **Mini-Project: `retrieval-evaluator`**
@@ -721,12 +746,13 @@ Build generation evaluation:
 ### Week 26: Hallucination Detection — Deep Dive
 
 **Why This Matters:**
-This is the most critical evaluation for most applications. Go deep.
+This is the most critical evaluation for most applications. Go deep with multiple approaches.
 
 **Learning Focus:**
 - Intrinsic vs extrinsic hallucination
-- Claim extraction
-- Claim verification approaches
+- Faithfulness metrics (RAGAS/DeepEval) for RAG
+- Semantic entropy concept (Nature 2024)
+- Claim extraction and verification pipelines
 - NLI (Natural Language Inference) for hallucination
 - Building detection pipelines
 
@@ -735,6 +761,7 @@ This is the most critical evaluation for most applications. Go deep.
 Build a hallucination detection system:
 ├── Extract claims from response
 ├── Verify claims against context
+├── Faithfulness scoring (RAGAS-style)
 ├── Score groundedness
 ├── Flag unsupported statements
 ├── Generate detailed report
@@ -813,7 +840,7 @@ Now apply your knowledge using the tools companies actually use.
 ### Week 29: DeepEval Setup & First Tests
 
 **Why This Matters:**
-DeepEval is "pytest for LLMs" — the most pytest-like LLM testing framework.
+DeepEval is "pytest for LLMs" — the DOMINANT open-source LLM testing framework (13,600+ GitHub stars, 50+ metrics).
 
 **Learning Focus:**
 - Installation and configuration
@@ -837,7 +864,7 @@ Set up DeepEval testing:
 ### Week 30: DeepEval Metrics — The Full Suite
 
 **Why This Matters:**
-DeepEval has 14+ built-in metrics. Know when to use each.
+DeepEval v3.8+ has 50+ built-in metrics. Know when to use each.
 
 **Learning Focus:**
 - Hallucination metric
@@ -845,6 +872,7 @@ DeepEval has 14+ built-in metrics. Know when to use each.
 - Faithfulness metric
 - Contextual metrics
 - Bias and toxicity metrics
+- Agentic metrics (Task Completion, Tool Correctness)
 
 **Mini-Project: `deepeval-metrics-explorer`**
 ```
@@ -865,8 +893,10 @@ Real projects need customization. Learn to extend DeepEval.
 
 **Learning Focus:**
 - Creating custom metrics in DeepEval
+- `@observe` decorator for component-level evaluation
 - Building evaluation datasets
 - Synthetic data generation with DeepEval
+- DeepTeam for red-teaming (40+ vulnerability types)
 - Confident AI platform integration
 
 **Mini-Project: `deepeval-custom`**
@@ -909,10 +939,10 @@ Build a complete CI/CD pipeline:
 ### Week 33: RAGAS Fundamentals
 
 **Why This Matters:**
-RAGAS is the gold standard for RAG evaluation. Essential knowledge.
+RAGAS is academically cited (EACL 2024) and the standard for RAG evaluation. Essential knowledge and good for research credibility.
 
 **Learning Focus:**
-- RAGAS architecture
+- RAGAS 0.4.x architecture
 - Core metrics (faithfulness, relevancy, precision, recall)
 - Dataset preparation
 - Running evaluations
@@ -937,9 +967,10 @@ RAGAS can generate test data automatically. Powerful for coverage.
 
 **Learning Focus:**
 - Synthetic test generation
-- Custom metrics in RAGAS
+- Custom metrics in RAGAS 0.4.x
 - Integration with other tools
-- RAGAS vs DeepEval comparison
+- RAGAS vs DeepEval RAG metrics comparison
+- When to use each for academic vs practical contexts
 
 **Mini-Project: `ragas-advanced`**
 ```
@@ -953,17 +984,17 @@ Advanced RAGAS usage:
 
 ---
 
-### Week 35: Promptfoo — Prompt Testing & Comparison
+### Week 35: Promptfoo — Prompt Testing & Red-Teaming
 
 **Why This Matters:**
-Promptfoo excels at A/B testing prompts. Different tool, different strengths.
+Promptfoo excels at prompt testing and red-teaming. Acquired by OpenAI (March 9, 2026), it remains open-source under MIT license and is now part of the OpenAI Frontier enterprise platform. 350K+ developers, 127+ Fortune 500 companies.
 
 **Learning Focus:**
 - YAML-based configuration
 - Prompt variants
 - Model comparison
 - Assertions and scoring
-- Red team features (preview)
+- Red-teaming capabilities (50+ vulnerability types)
 
 **Mini-Project: `promptfoo-starter`**
 ```
@@ -972,22 +1003,22 @@ Set up prompt testing with Promptfoo:
 ├── Define prompt variants
 ├── Run comparison tests
 ├── Analyze results
-└── Integrate with CI
+└── Integrate with CI (GitHub Actions)
 ```
 
 ---
 
-### Week 36: Promptfoo Advanced — Multi-Model & Red Team
+### Week 36: Promptfoo Advanced — Red-Teaming & Multi-Model
 
 **Why This Matters:**
-Promptfoo's model comparison and built-in red team features are unique.
+Promptfoo's red-teaming and model comparison capabilities are industry-leading (now OpenAI-backed).
 
 **Learning Focus:**
 - Testing across multiple models
-- Built-in red team probes
+- Built-in red team probes (50+ vulnerability types)
 - Custom assertions
 - Cost tracking
-- Integration patterns
+- CI/CD integration with GitHub Actions
 
 **Mini-Project: `promptfoo-advanced`**
 ```
@@ -996,6 +1027,7 @@ Advanced Promptfoo usage:
 ├── Run red team probes
 ├── Create custom assertions
 ├── Track costs across providers
+├── GitHub Actions integration
 └── Build decision framework
 ```
 
@@ -1004,21 +1036,23 @@ Advanced Promptfoo usage:
 ### Week 37: Tool Comparison & Selection Framework
 
 **Why This Matters:**
-You now know 3 frameworks. Know when to use each.
+You now know the major frameworks. Know when to use each and what else is available.
 
 **Learning Focus:**
-- DeepEval vs RAGAS vs Promptfoo
-- Strengths and weaknesses
-- Combination strategies
-- Selection criteria
-- Migration patterns
+- DeepEval (comprehensive, pytest-native)
+- RAGAS (academic foundation, RAG-focused)
+- Promptfoo (red-teaming leader, OpenAI-backed)
+- Arize Phoenix (observability + evaluation)
+- MLflow 3.x (enterprise, Databricks ecosystem)
+- Langfuse (open-source LangSmith alternative)
+- Combination strategies and selection criteria
 
 **Mini-Project: `tool-benchmark`**
 ```
 Create comprehensive comparison:
-├── Same tests across all 3 tools
+├── Same tests across major tools
 ├── Benchmark: speed, ease, coverage
-├── Document strengths/weaknesses
+├── Document strengths/weaknesses of each
 ├── Create selection decision tree
 └── Build "unified" wrapper (optional)
 ```
@@ -1070,22 +1104,25 @@ AI is evolving. Agents are the future. Production is where it matters.
 ### Week 39: Agent Architecture — Understanding What You Test
 
 **Why This Matters:**
-Agents are fundamentally different from simple LLM calls. Understand the architecture.
+Agents are fundamentally different from simple LLM calls. 57% of organizations have agents in production (LangChain survey). Understand the architecture.
 
 **Learning Focus:**
 - What is an AI agent?
-- ReAct pattern (Reason → Act → Observe)
-- Tool/function calling
-- Memory and state
-- Multi-step planning
+- ReAct pattern as foundational (Reason → Act → Observe)
+- Plan-and-Execute pattern
+- ReWOO (parallel planning)
+- Reflection pattern
+- Hierarchical orchestration
+- OWASP Top 10 for Agentic Applications: Agent Goal Hijacking awareness
 
 **Mini-Project: `agent-anatomy`**
 ```
 Study and document agent architecture:
 ├── Build a simple ReAct agent
 ├── Trace execution step-by-step
+├── Compare ReAct vs Plan-and-Execute
 ├── Identify decision points
-├── Map failure modes
+├── Map failure modes (including goal hijacking)
 └── Design testing strategy
 ```
 
@@ -1099,8 +1136,11 @@ Agents use tools. Testing tool selection and execution is critical.
 **Learning Focus:**
 - Function calling APIs
 - Tool definition and schema
+- Tool Search feature testing (GPT-5.4, Claude 4.x)
 - Tool selection accuracy
 - Parameter extraction
+- MCP (Model Context Protocol) awareness
+- OWASP Agentic: Tool Misuse testing
 - Error handling in tools
 
 **Mini-Project: `tool-tester`**
@@ -1109,6 +1149,7 @@ Build tool testing framework:
 ├── Define test tools
 ├── Test tool selection accuracy
 ├── Test parameter extraction
+├── Test Tool Search behavior
 ├── Inject tool failures
 ├── Measure recovery behavior
 └── Generate tool usage report
@@ -1122,20 +1163,26 @@ Build tool testing framework:
 Agents are goal-oriented. Test whether they achieve goals.
 
 **Learning Focus:**
-- Task completion metrics
-- Trajectory evaluation
-- Efficiency metrics (steps, cost)
+- Task completion rate
+- Tool correctness
+- Trajectory analysis
+- Token efficiency
+- pass@k measures
 - Partial success handling
 - Evaluation datasets for agents
+
+> **Note:** Only 52% of teams run offline evals, 37% run online evals (LangChain survey). This is a major opportunity for AI test professionals.
 
 **Mini-Project: `agent-evaluator`**
 ```
 Build agent evaluation framework:
 ├── Define task completion criteria
 ├── Implement trajectory scoring
-├── Measure efficiency
+├── Measure tool correctness
+├── Calculate token efficiency
 ├── Handle partial completions
-├── Generate agent performance report
+├── pass@k evaluation
+└── Generate agent performance report
 ```
 
 ---
@@ -1143,22 +1190,24 @@ Build agent evaluation framework:
 ### Week 42: Multi-Agent & Complex Flows
 
 **Why This Matters:**
-Real systems have multiple agents collaborating. Test the interactions.
+Real systems have multiple agents collaborating. Test the interactions and know the frameworks.
 
 **Learning Focus:**
-- Multi-agent architectures
-- Agent communication
-- Coordination testing
-- Conflict detection
-- End-to-end flows
+- LangGraph (primary — 24,600 stars, 38M+ monthly downloads)
+- OpenAI Agents SDK (simpler alternative, 4 primitives)
+- CrewAI awareness (good for prototyping, scalability limits)
+- Microsoft Agent Framework (AutoGen + Semantic Kernel, RC February 2026)
+- OWASP Agentic: Delegated Trust, Privilege Compromise
+- Coordination testing and conflict detection
 
 **Mini-Project: `multi-agent-tester`**
 ```
 Test multi-agent systems:
-├── Build simple multi-agent setup
+├── Build simple multi-agent setup (LangGraph)
 ├── Test inter-agent communication
 ├── Detect coordination failures
 ├── Test conflict resolution
+├── Test privilege boundaries
 └── End-to-end scenario testing
 ```
 
@@ -1167,19 +1216,20 @@ Test multi-agent systems:
 ### Week 43: Production Monitoring — Observability
 
 **Why This Matters:**
-Testing doesn't stop at deployment. Production monitoring is ongoing testing.
+Testing doesn't stop at deployment. Production monitoring is ongoing testing. AgentOps is the emerging discipline (like DevOps for AI agents).
 
 **Learning Focus:**
-- LangSmith for tracing
-- Logging best practices
+- LangSmith for tracing (strong for LangChain teams)
+- Langfuse (MIT license, self-hostable, 19K+ stars)
+- Arize Phoenix (observability + evaluation)
+- AgentOps concept (emerging discipline)
 - Metrics to track in production
 - Alerting strategies
-- Debug workflows
 
 **Mini-Project: `production-monitor`**
 ```
 Build monitoring setup:
-├── Integrate LangSmith tracing
+├── Integrate tracing (LangSmith or Langfuse)
 ├── Define key metrics
 ├── Set up dashboards
 ├── Create alerting rules
@@ -1221,7 +1271,8 @@ LLMs are expensive and slow. Test and optimize both.
 - Latency benchmarking
 - Throughput testing
 - Token usage optimization
-- Cost tracking and budgeting
+- Multi-provider cost comparison
+- Cache utilization metrics (Responses API improves 40-80%)
 - Caching strategies
 
 **Mini-Project: `perf-cost-tester`**
@@ -1230,7 +1281,8 @@ Build performance testing suite:
 ├── Latency benchmarking tool
 ├── Throughput tester
 ├── Token usage analyzer
-├── Cost calculator
+├── Multi-provider cost calculator
+├── Cache utilization tester
 ├── Caching effectiveness tester
 └── Optimization recommendations
 ```
@@ -1334,11 +1386,12 @@ Everything comes together. Build something real.
 ### Week 51: CI/CD Integration & Polish
 
 **Focus:**
-- GitHub Action
+- GitHub Actions CI/CD templates
+- OpenTelemetry for data portability
 - Documentation
 - Examples
 - Tests for the framework
-- Edge case handling
+- Integration with modern DeepEval patterns and Promptfoo-style red-teaming
 
 **Deliverable:** CI/CD ready + full docs
 
@@ -1374,15 +1427,17 @@ Everything comes together. Build something real.
 
 | Week | Topic | Project |
 |------|-------|---------|
-| 53 | Garak Introduction | `garak-scanner` |
+| 53 | Garak Introduction (~100 attack vectors) | `garak-scanner` |
 | 54 | Prompt Injection Deep Dive | `injection-tester` |
 | 55 | Jailbreak Testing | `jailbreak-suite` |
 | 56 | Custom Garak Probes | `custom-probes` |
 | 57 | OWASP LLM Top 10 (Part 1) | `owasp-tester-1` |
 | 58 | OWASP LLM Top 10 (Part 2) | `owasp-tester-2` |
 | 59 | DeepTeam Red Teaming | `deepteam-harness` |
-| 60 | Security Reporting | `security-reporter` |
+| 60 | Microsoft PyRIT v0.11.0 (Azure AI Foundry) | `security-reporter` |
 | 61-62 | Red Team Capstone | `red-team-suite` |
+
+**Tools:** Garak (NVIDIA, ~100 attack vectors), Microsoft PyRIT v0.11.0, Promptfoo (now OpenAI-backed)
 
 **Career Outcome:** AI Security Engineer, Red Team Specialist
 

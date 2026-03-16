@@ -62,18 +62,18 @@ Validate against requirements   →    Evaluate against metrics
 
 | Week | Focus | Mini-Project | Skills |
 |------|-------|--------------|--------|
-| 9 | How LLMs Work | `llm-concepts-notebook` — Visualizing concepts | Tokens, temperature, sampling |
-| 10 | Transformers | `attention-explainer` — Attention visualization | Attention mechanism, context |
-| 11 | Tokenization | `tokenizer-explorer` — Tokenizer deep dive | BPE, tiktoken, limits |
-| 12 | OpenAI API | `openai-test-client` — API wrapper | API auth, chat completions |
-| 13 | Claude API (Multi-Model) | `multi-provider-client` — Unified interface | Anthropic API, abstraction |
-| 14 | Prompt Engineering | `prompt-tester` — Prompt experiments | CoT, few-shot, system prompts |
-| 15 | Failure Modes 1 | `hallucination-examples` — Hallucination catalog | Hallucination types |
+| 9 | How LLMs Work | `llm-concepts-notebook` — Simulator & analyzer | Tokens, temperature, sampling |
+| 10 | Transformers | `attention-explainer` — Position tester & heatmap | Attention mechanism, context |
+| 11 | Tokenization | `tokenizer-explorer` — Token counting & cost | tiktoken, truncation, cost |
+| 12 | OpenAI API | `openai-test-client` — Responses API wrapper | Responses API, Structured Outputs |
+| 13 | Multi-Provider (OpenAI, Anthropic, Google) | `multi-provider-client` — Unified interface | Claude 4.x, Gemini 3.1, abstraction |
+| 14 | Prompt Engineering | `prompt-tester` — Prompt evaluation | Versioning, eval sets, regression |
+| 15 | Failure Modes 1 | `hallucination-examples` — Labeled dataset | Hallucination types, faithfulness |
 | 16 | Failure Modes 2 | `consistency-tester` — Inconsistency tests | Non-determinism, drift |
-| 17 | Failure Modes 3 | `edge-case-generator` — Edge case suite | Boundary testing, inputs |
-| 18 | LangChain Basics | `simple-chain-tester` — Chain testing | Chains, PromptTemplates |
+| 17 | Failure Modes 3 | `edge-case-generator` — Adversarial test suite | Prompt injection, OWASP awareness |
+| 18 | LLM Workflows | `simple-chain-tester` — LangChain & LangGraph | LCEL, LangGraph basics |
 
-**Phase Outcome:** Understand LLM internals, can interact with APIs, documented failure taxonomy.
+**Phase Outcome:** Understand LLM internals, can interact with OpenAI/Anthropic/Gemini APIs, documented failure taxonomy including adversarial inputs.
 </details>
 
 <details>
@@ -101,17 +101,17 @@ Validate against requirements   →    Evaluate against metrics
 | Week | Focus | Mini-Project | Skills |
 |------|-------|--------------|--------|
 | 29 | DeepEval Setup | `deepeval-starter` — First DeepEval tests | Installation, basic usage |
-| 30 | DeepEval Metrics | `deepeval-metrics-explorer` — All built-in metrics | 14+ metrics mastery |
-| 31 | DeepEval Advanced | `deepeval-custom` — Custom metrics & datasets | Custom metric integration |
+| 30 | DeepEval Metrics | `deepeval-metrics-explorer` — 50+ metrics | Agentic + standard metrics |
+| 31 | DeepEval Advanced | `deepeval-custom` — Custom metrics & DeepTeam | Custom metric, red-teaming |
 | 32 | DeepEval CI/CD | `deepeval-pipeline` — GitHub Actions integration | CI/CD for LLM tests |
-| 33 | RAGAS Fundamentals | `ragas-starter` — First RAGAS evaluation | Core RAGAS metrics |
+| 33 | RAGAS Fundamentals | `ragas-starter` — First RAGAS evaluation | Core RAGAS 0.4.x metrics |
 | 34 | RAGAS Advanced | `ragas-advanced` — Synthetic data generation | Full RAGAS pipeline |
-| 35 | Promptfoo Setup | `promptfoo-starter` — Prompt comparison testing | Promptfoo basics |
-| 36 | Promptfoo Advanced | `promptfoo-advanced` — Full A/B testing | Advanced comparisons |
-| 37 | Tool Comparison | `tool-benchmark` — Compare all 3 frameworks | Framework selection strategy |
+| 35 | Promptfoo Setup | `promptfoo-starter` — Prompt & red-team testing | Promptfoo basics (OpenAI-acquired) |
+| 36 | Promptfoo Advanced | `promptfoo-advanced` — Full red-teaming | 50+ vulnerability types |
+| 37 | Tool Comparison | `tool-benchmark` — Compare all frameworks | Framework selection strategy |
 | 38 | Open Source Contribution | `first-contribution` — First PR to a framework | OSS contribution |
 
-**Phase Outcome:** Proficient in DeepEval, RAGAS, and Promptfoo. First OSS contribution merged.
+**Phase Outcome:** Proficient in DeepEval, RAGAS, and Promptfoo (now OpenAI-backed). Aware of Arize Phoenix, MLflow 3.x, and Langfuse. First OSS contribution merged.
 </details>
 
 <details>
@@ -119,16 +119,16 @@ Validate against requirements   →    Evaluate against metrics
 
 | Week | Focus | Mini-Project | Skills |
 |------|-------|--------------|--------|
-| 39 | Agent Architecture | `agent-anatomy` — ReAct pattern study | Agent internals, tracing |
-| 40 | Tool Use Testing | `tool-tester` — Test function calling | Tool validation |
-| 41 | Agent Evaluation | `agent-evaluator` — Task completion metrics | Trajectory evaluation |
-| 42 | Multi-Agent Systems | `multi-agent-tester` — Collaborative agents | Coordination testing |
-| 43 | Production Monitoring | `production-monitor` — LangSmith setup | Observability, tracing |
+| 39 | Agent Architecture | `agent-anatomy` — Agent patterns study | ReAct, Plan-and-Execute, ReWOO |
+| 40 | Tool Use Testing | `tool-tester` — Test function calling | Tool validation, MCP awareness |
+| 41 | Agent Evaluation | `agent-evaluator` — Task completion metrics | Trajectory, tool correctness, pass@k |
+| 42 | Multi-Agent Systems | `multi-agent-tester` — LangGraph agents | LangGraph, OpenAI Agents SDK |
+| 43 | Production Monitoring | `production-monitor` — Observability setup | LangSmith, Langfuse, Arize Phoenix |
 | 44 | Drift Detection | `drift-detector` — Catch regressions | Regression testing |
-| 45 | Performance & Cost | `perf-cost-tester` — Latency/Token benchmarks | Load testing, optimization |
+| 45 | Performance & Cost | `perf-cost-tester` — Latency/Token benchmarks | Multi-provider cost, caching |
 | 46 | Human Evaluation | `human-eval-framework` — Annotation systems | Human-in-the-loop |
 
-**Phase Outcome:** Can test complex agentic systems and monitor them in production.
+**Phase Outcome:** Can test complex agentic systems (LangGraph, OpenAI Agents SDK) and monitor them in production. OWASP Agentic Top 10 awareness.
 </details>
 
 <details>
@@ -151,7 +151,7 @@ Validate against requirements   →    Evaluate against metrics
 
 ### 🔴 Track A: Security & Red Teaming (+10 Weeks)
 For those targeting AI Security roles.
-*   **Focus:** Prompt Injection, Jailbreaking, Garak, OWASP Top 10.
+*   **Focus:** Prompt Injection, Jailbreaking, Garak (~100 attack vectors), PyRIT v0.11.0, OWASP Top 10.
 *   **Key Projects:** `garak-scanner`, `injection-tester`, `red-team-suite`.
 
 ### 🟤 Track B: ML Deep Dive (+10 Weeks)
@@ -245,15 +245,18 @@ genai-testing-journey/
 |------|---------|-------|
 | [DeepEval](https://github.com/confident-ai/deepeval) | LLM evaluation framework | Phase 3 |
 | [RAGAS](https://github.com/explodinggradients/ragas) | RAG evaluation | Phase 3 |
-| [Promptfoo](https://github.com/promptfoo/promptfoo) | Prompt testing | Phase 3 |
-| [Garak](https://github.com/NVIDIA/garak) | LLM vulnerability scanning | Phase 4 |
-| [LangSmith](https://smith.langchain.com/) | LLM observability | Phase 3 |
+| [Promptfoo](https://github.com/promptfoo/promptfoo) | Red-teaming & prompt testing (OpenAI) | Phase 3 |
+| [LangGraph](https://langchain-ai.github.io/langgraph/) | Agent orchestration | Phase 4 |
+| [Arize Phoenix](https://github.com/Arize-ai/phoenix) | Observability + evaluation | Phase 4 |
+| [Garak](https://github.com/NVIDIA/garak) | LLM vulnerability scanning | Optional |
 
 ### Essential Blogs
 - [Jay Alammar](https://jalammar.github.io/) — Visual LLM explanations
 - [Simon Willison](https://simonwillison.net/) — Prompt injection, LLM security
 - [Eugene Yan](https://eugeneyan.com/) — LLM evaluation, MLOps
-- [Confident AI Blog](https://www.confident-ai.com/blog) — LLM testing practices
+- [Confident AI Blog](https://www.confident-ai.com/blog) — LLM testing practices (DeepEval)
+- [LangChain Blog](https://blog.langchain.dev/) — Agents, LangGraph
+- [Anthropic Research Blog](https://www.anthropic.com/research) — AI safety and research
 
 ---
 
@@ -269,6 +272,9 @@ Special thanks to:
 - The QA community for the incredible support on Day 1
 - [Confident AI](https://confident-ai.com) for DeepEval
 - [NVIDIA](https://nvidia.com) for Garak
+- [LangChain](https://langchain.com) for LangGraph
+- [Anthropic](https://anthropic.com) and [Google](https://ai.google.dev/) for outstanding API documentation
+- [Promptfoo](https://promptfoo.dev) / [OpenAI](https://openai.com) for red-teaming tools
 - Everyone learning in public
 
 ---
