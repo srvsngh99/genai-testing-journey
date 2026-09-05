@@ -2,8 +2,8 @@
 
 <div align="center">
 
-![Week](https://img.shields.io/badge/Current_Week-9%2F52-blue?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-In_Progress-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Paused_at_Week_9-lightgrey?style=for-the-badge)
+![Now](https://img.shields.io/badge/Now-AI_Native_Engineering-black?style=for-the-badge)
 ![Followers](https://img.shields.io/badge/Community-Growing-orange?style=for-the-badge)
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube)](https://youtube.com/@SouravAILabs)
 
@@ -14,6 +14,25 @@
 [📚 Full Roadmap](#-the-52-week-roadmap) • [🎯 Weekly Progress](#-weekly-progress-tracker) • [📺 YouTube](https://www.youtube.com/@SouravAILabs) • [🔗 LinkedIn](https://www.linkedin.com/in/srv-sngh) • [🤝 Join the Journey](#-join-the-community) • [📖 Resources](#-resources)
 
 </div>
+
+---
+
+## Where this journey went (September 2026)
+
+I paused this series at week 9, and I am not going to finish it the way it was planned. Not because it lacks value: it is the natural next step for any QA or test engineer today, and I went down this road myself after a decade in quality engineering.
+
+What changed is the ground under it. The amount of output frontier AI produces, and the speed it produces it at, cannot be validated by a human reading every response or every line of code. It can only be validated by AI: systems, evals, loops and workflows. My own job changed the same way. I moved from GenAI Testing to **AI Native Engineering**: I build, oversee and maintain the systems, my judgment gets encoded into the agents, and the agents do the rest.
+
+So this repo stays up as the roadmap it is (the 52-week plan below is still a good map of the territory), and the work moved here:
+
+| If you came here for | Go here |
+|---|---|
+| Learning GenAI testing, properly, for free | The **GenAI Testing** course (53 lessons) and the **AI Native Engineer** course (110 lessons) at [souravailabs.ai](https://souravailabs.ai) |
+| Running and building with local models on a Mac | [Krill](https://github.com/srvsngh99/Krill): a Mac-native LLM runtime that is also a coding agent, one Swift + MLX binary. Quantized models on [Hugging Face](https://huggingface.co/srv-sngh) |
+| Watching instead of reading | [YouTube @SouravAILabs](https://www.youtube.com/@SouravAILabs), where two AI agents run the channel for September 2026 |
+| The full story of the pivot | [The LinkedIn post](https://www.linkedin.com/posts/srv-sngh_people-keep-messaging-me-asking-when-ill-share-7492328323696615424-bWVX), and everything since on [LinkedIn](https://www.linkedin.com/in/srv-sngh) |
+
+If you are a QA engineer feeling the ground shift under you: it is. The question is not whether to move. It is which direction.
 
 ---
 
@@ -169,13 +188,13 @@ For Staff/Principal engineering roles.
 | Phase | Weeks | Status | Progress |
 |-------|-------|--------|----------|
 | 🔵 Foundation | 1-8 | 🟢 Completed | ██████████ 100% |
-| 🟣 LLM Fundamentals | 9-18 | 🟡 In Progress | ░░░░░░░░░░ 0% |
+| 🟣 LLM Fundamentals | 9-18 | ⏸️ Paused | ░░░░░░░░░░ 0% |
 | 🟢 Evaluation Core | 19-28 | ⚪ Not Started | ░░░░░░░░░░ 0% |
 | 🟡 Frameworks Mastery | 29-38 | ⚪ Not Started | ░░░░░░░░░░ 0% |
 | 🟠 Agentic AI | 39-46 | ⚪ Not Started | ░░░░░░░░░░ 0% |
 | ⭐ Capstone | 47-52 | ⚪ Not Started | ░░░░░░░░░░ 0% |
 
-**Overall: Week 9/52** — 17.3% Complete
+**Overall: paused at Week 9/52** (January to May 2026). See [where this journey went](#where-this-journey-went-september-2026).
 
 ---
 
@@ -281,9 +300,9 @@ Special thanks to:
 
 <div align="center">
 
-**Week 9/52— The journey of a thousand miles begins with a single step.**
+**Paused at Week 9/52. The journey continued in a different direction.**
 
-*Started: January 2026 | Target Completion: January 2027*
+*Started: January 2026 | Paused: May 2026 | Now: [souravailabs.ai](https://souravailabs.ai)*
 
 [![LinkedIn](https://img.shields.io/badge/Follow_the_Journey-LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/srv-sngh)
 [![YouTube](https://img.shields.io/badge/Subscribe-YouTube-FF0000?style=for-the-badge&logo=youtube)](https://youtube.com/@SouravAILabs)
