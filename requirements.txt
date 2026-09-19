@@ -1,0 +1,6 @@
+# Dependencies for the genai-testing-journey weekly material.
+# Kept intentionally minimal: these are the only two third-party
+# packages the repo uses. Add more as later weeks need them.
+
+requests>=2.32   # week 4 practice, week 6 mini project HTTP client
+pytest>=8.0      # week 7 and week 8 test suites
