@@ -118,6 +118,7 @@ A curated collection of resources for the GenAI Test Architect journey, organize
 ## Community Resources
 
 ### Blogs & Newsletters
+- [AI Weekly](https://aiweekly.co/) (models, agents, research, and policy ranked from what AI experts read and share)
 - [Confident AI Blog](https://www.confident-ai.com/blog) (DeepEval, LLM testing)
 - [LangChain Blog](https://blog.langchain.dev/) (agents, LangGraph)
 - [Anthropic Research Blog](https://www.anthropic.com/research)
